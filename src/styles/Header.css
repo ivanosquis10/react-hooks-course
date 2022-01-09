@@ -1,0 +1,16 @@
+.Header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: blue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
