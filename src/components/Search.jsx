@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles/Search.css';
 
 const Search = ({ search, searchInput, handleSearch }) => {
   return (
-    <div className="search">
+    <div className="Search">
       <input
         type="text"
         placeholder="search a character"

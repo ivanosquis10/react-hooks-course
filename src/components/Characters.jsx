@@ -9,6 +9,9 @@ import React, {
 import { useCharacters } from '../hooks/useCharacter';
 import { Character } from './Character';
 import { Search } from './Search';
+import { Favorites } from './Favorites';
+
+import '../styles/Characters.css';
 
 const API = 'https://rickandmortyapi.com/api/character/';
 
@@ -70,10 +73,13 @@ const Characters = () => {
   );
 
   return (
-    <div className="characters">
-      {favorites.favorites.map((favorite) => (
-        <li key={favorite.id}>{favorite.name}</li>
-      ))}
+    <div>
+      <h3>Your favorites characters:</h3>
+      <section className="Favorites">
+        {favorites.favorites.map((favorite) => (
+          <Favorites favorite={favorite} key={favorite.id} />
+        ))}
+      </section>
 
       <Search
         search={search}
@@ -81,13 +87,15 @@ const Characters = () => {
         handleSearch={handleSearch}
       />
 
-      {filteredCharacters.map((character) => (
-        <Character
-          character={character}
-          key={character.id}
-          handleReducer={handleReducer}
-        />
-      ))}
+      <div className="Characters">
+        {filteredCharacters.map((character) => (
+          <Character
+            character={character}
+            key={character.id}
+            handleReducer={handleReducer}
+          />
+        ))}
+      </div>
     </div>
   );
 };

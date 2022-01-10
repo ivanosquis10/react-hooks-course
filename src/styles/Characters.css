@@ -1,0 +1,25 @@
+.Characters {
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-items: center;
+  /* gap: 1rem; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.8rem;
+}
+
+.Favorites {
+  width: 100%;
+  /* height: 50px; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Favorites img {
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #7f5af0;
+}
